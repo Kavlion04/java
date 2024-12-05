@@ -1,57 +1,90 @@
-
-// 1chi masala 
+//2chisi masala 
 /*
-number = Number(prompt("Uch xonali sonni kiriting: "))
-let hundreds = Math.floor(number / 100)
-let tens = Math.floor((number / 10) % 10)
-let units = number % 10  
-let new_number = units * 100 + hundreds * 10 + tens
-prompt("Natija:", new_number) 
+let q = parseFloat(prompt("Kubning tomonini kiriting: "));
+if (q > 0) { 
+    let hajm = Math.pow(q, 3); //3 tomon kopaytmasi hajm deb ataladi yana hajm= a*a*a
+    let Yuza = Math.pow(q, 2) * 6; // berilgan sonnni darajaga kotarib 6 kopaytirsek yuzasi kelib ciqadi
+    alert(`Kubning hajmi: ${hajm}  Kubning to‘liq sirt yuzasi: ${Yuza}`);
+} else {
+    alert("kub tomonlari musbat");
+
+    
+}
 */
 
-
-//2chi masala
-
+//3 chisi masala
 /*
-number = Number(prompt("999 dan katta bo'lgan sonni kiriting: "))
-thousands_digit =(number / 1000) % 10
-prompt("Mingliklar xonasidagi raqam:", thousands_digit)  
-*/
-
-
-//3chi masala
-/*
-number = Number(prompt("Uch xonali sonni kiriting: "))
-let hundreds = Math.floor(number / 100)
-let tens = Math.floor((number / 10) % 10)
-let units = number % 10  
-let new_number = units + hundreds  + tens
-prompt("yigindi:", new_number)
- */
-
-
-
-// 4chi masala
-/*
-number = Number(prompt("Uch xonali sonni kiriting: "))
-hundreds = number / 100  
-tens = (number / 10) % 10
-units = number % 10 
-reversed_number = units * 100 + tens * 10 + hundreds
-prompt("Teskari tartibda hosil bo'lgan son:", reversed_number)
-console.log(reversed_number)
+let x = parseInt(prompt("x kiritin: "));
+let y = parseInt(prompt("y kiritin: "));
+if (x >= 1 && x <= 8 && y >= 1 && y <= 8) {
+    if ((x + y) % 2 === 0) {
+        alert(`Berilgan (${x}, ${y}) maydon oq.`);
+    } else {
+        alert(`Berilgan (${x}, ${y}) maydon qora.`);
+    }
+} else {
+    alert("Koordinatalar 1 va 8 orasida bo‘lishi kerak!");
+}
 
 */
 
 
-
-//5chi masala
+//4 chisi masala
 /*
-let N = parseInt(prompt("Kun boshidan o'tgan soniyalarni kiriting:"));
-let hours = Math.floor(N / 3600);
-let minutes = Math.floor((N % 3600) / 60);
-let seconds = N % 60;
-console.log(`Kun boshidan ${hours} soat ${minutes} minut va ${seconds} sekund o'tgan.`);
-alert(`Kun boshidan ${hours} soat ${minutes} minut va ${seconds} sekund o'tgan.`);
+let A = parseFloat(prompt("A nuqtasi: "));
+let B = parseFloat(prompt("B nuqtasi: "));
+let C = parseFloat(prompt("C nuqtasi: "));
+let AB = Math.abs(A - B);
+let AC = Math.abs(A - C);
+let yigindi, ortadagimasofa;
+if (AB < AC) {
+    yigindi = "B";
+    ortadagimasofa = AB;
+} else if (AC < AB) {
+    yigindi = "C";
+    ortadagimasofa = AC;
+} else {
+    yigindi = "ikkalasiyam yaqin ";
+    ortadagimasofa = AB;
+}
+alert(`A nuqtasiga yaqini: ${yigindi}, Masofa: ${ortadagimasofa}`);
+
 */
 
+
+
+//5 chisi masala // 3 ta nuqtasi aniqlangan 4 chi nuqtani ciqarish kere?
+
+/*
+let x = 1 ^ 1 ^ 4;
+let y = 2 ^ 5 ^ 2;
+alert    ("To'rtinchi nuqta koordinatasi: (" + x + ", " + y + ")");
+*/
+
+
+
+// 6 chisi masala
+/*
+
+let a = parseInt(prompt("a: "));
+let b = parseInt(prompt("b: "));
+if (a > 0 && b > 0) {
+    let qoshish = a + b;
+    let ayirish = a - b;
+    let kopaytirish = a * b;
+    let bolish = a / b;
+    alert(`A + B = ${qoshish} \nA - B = ${ayirish} \nA * B = ${kopaytirish} \nA / B = ${bolish}`);
+} else {
+    alert("Musbat son kiriting");
+}
+*/
+//7chis masala
+/*
+let a = parseInt(prompt("a: "));
+let P = 3.14;
+let R = a ;
+let D = 2 * R;
+let L = 2 * P * R;
+let S = P * R * R;
+alert(`Radiusi: ${R} \nDiametri: ${D} \nUzunligi: ${L} \nYuzi: ${S}`);
+*/
